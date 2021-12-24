@@ -60,7 +60,7 @@ public class Generic {
 
 
     String[] stringArray(int numOfParameters) {
-        String[] stringArr = new String[][numOfParameters];
+        String[] stringArr = new String[numOfParameters];
         Scanner sc = new Scanner(System.in);
         System.out.println("enter " + numOfParameters + " strings");
         for(int i=0; i< stringArr.length; i++)
