@@ -14,6 +14,10 @@ public class Generic {
         return max;
     }
 
+    public static <T> void printMax(T max) {
+        System.out.println("Maximum= " + max);
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new java.util.Scanner(System.in);
         System.out.println("Enter how many parameters you want to enter");
@@ -24,15 +28,18 @@ public class Generic {
         switch (option){
             case 1:
                 Integer[] intArr = generic.intArray(numOfParameters);
-                findMax(intArr);
+                Integer maxInt= findMax(intArr);
+                printMax(maxInt);
                 break;
             case 2:
                 Float[] floatArr = generic.floatArray(numOfParameters);
-                findMax(floatArr);
+                Float maxFloat = findMax(floatArr);
+                printMax(maxFloat);
                 break;
             case 3:
                 String[] stringArr = generic.stringArray(numOfParameters);
-                findMax(stringArr);
+                String maxString = findMax(stringArr);
+                printMax(maxString);
                 break;
             default:
                 System.out.println("Wrong Choice");
@@ -68,4 +75,4 @@ public class Generic {
         return stringArr;
     }
 
-}
+    }
